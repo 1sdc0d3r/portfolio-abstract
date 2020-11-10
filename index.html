@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/core.css" />
     <title>Braden Bell</title>
+    <script>
+      function navScroll(id) {
+        const el = document.getElementById(id);
+        const rect = el.getBoundingClientRect();
+
+        const y = rect.top + window.pageYOffset - 50;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    </script>
   </head>
   <body>
     <nav>
       <p>Logo</p>
       <div>
-        <p>Home</p>
-        <p>Services</p>
-        <p>Portfolio</p>
-        <p>Contact</p>
+        <a onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'})"
+          >Home</a
+        >
+        <a onclick="navScroll('about')">About</a>
+        <a onclick="navScroll('portfolio')">Portfolio</a>
+        <a onclick="navScroll('contact')">Contact</a>
       </div>
     </nav>
-    <section class="intro">
+    <section class="home" id="home">
       <h1>Hi, I'm Braden!</h1>
       <h2>I am a software engineer</h2>
       <p>
@@ -33,7 +45,7 @@
       </div>
       <button>More About Me</button>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="wrapper">
         <div class="img-wrapper">
           <img src="./assets/Braden.png" alt="Braden Bell" />
@@ -59,7 +71,8 @@
         <button>See Portfolio</button>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
+      <a name="test"></a>
       <h2>Portfolio</h2>
       <hr />
       <p>
@@ -84,7 +97,7 @@
         <div></div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2>Contact</h2>
       <hr />
       <div class="wrapper">
