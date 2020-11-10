@@ -1,0 +1,117 @@
+h1 {
+  font-size: 3.25em;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 1.75em;
+  margin-top: 0;
+  text-align: center;
+}
+h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+h4 {
+  font-size: 1.35em;
+}
+h5 {
+  font-size: 1.2em;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+  }
+}
+section {
+  margin: 8em auto;
+}
+.intro {
+  h2 {
+    text-align: left;
+  }
+  div {
+    display: flex;
+    p {
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+  }
+  button {
+    border: 1px solid black;
+    padding: 0.25em 0.5em;
+  }
+}
+.about {
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    .img-wrapper {
+      position: relative;
+      img {
+        width: 10em;
+      }
+      .accent {
+        position: absolute;
+        background: blue;
+        padding: 2em;
+        top: 0;
+        z-index: -1;
+      }
+    }
+  }
+  .btns {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    button {
+      border: 2px solid black;
+      &:first-child {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+.portfolio {
+  text-align: center;
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    div {
+      //   margin: auto;
+      border: 2px solid black;
+      padding: 6em;
+      &:last-child {
+        border-color: red;
+        //todo flex end
+      }
+    }
+  }
+}
+.contact {
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    .left {
+      .follow {
+        display: flex;
+        p {
+          margin-right: 0.25em;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
